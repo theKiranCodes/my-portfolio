@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Kiran Kumar Korimi - Full Stack Developer & Computer Engineering Student. Personal portfolio showcasing projects, skills, and experience."/>
+<meta name="keywords" content="Kiran Kumar Korimi, Full Stack Developer, Web Developer, Computer Engineering, Portfolio"/>
+<meta name="author" content="Kiran Kumar Korimi"/>
+<title>Kiran Kumar Korimi | Full Stack Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader" class="loader">
+  <div class="loader-inner">
+    <div class="loader-circle"></div>
+    <p class="loader-text">Loading...</p>
+  </div>
+</div>
+
+<!-- Particles Background -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">&lt; Kiran Kumar /&gt;</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-text reveal">
+      <span class="hero-greeting">👋 Hello, I'm</span>
+      <h1 class="hero-name">Kiran Kumar<br/><span class="gradient-text">Korimi</span></h1>
+      <div class="hero-subtitle">
+        <span class="static-text">Full Stack Developer | </span>
+        <span id="typed-text" class="typed-text"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-intro">Motivated Diploma graduate in Computer Engineering (CME) with hands-on industrial training in Data Science and Full Stack Development. Passionate about building modern web applications and continuously learning new technologies.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="resume.pdf" class="btn btn-secondary" download><i class="fas fa-download"></i> Download Resume</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/kiran-kumar-korimi-55750a3a2" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:kirankumarkorimi@gmail.com" class="social-icon" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/theKiranCodes" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-avatar-wrapper">
+        <div class="avatar-ring"></div>
+        
+        <!-- Interactive Flipping Glassmorphic Avatar Card -->
+        <div class="avatar-card-container">
+          <div class="avatar-card" id="hero-avatar-card">
+            <!-- Front: Photo Profile -->
+            <div class="avatar-front">
+              <img src="image/img2.png" alt="Kiran Kumar Korimi" loading="lazy" />
+              <div class="avatar-photo-label">
+                <h3>Kiran Kumar Korimi</h3>
+                <p><i class="fas fa-sync-alt"></i> Tap / Hover to Flip</p>
+              </div>
+            </div>
+            <!-- Back: Coder Details -->
+            <div class="avatar-back">
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="code-title">developer.js</span>
+                </div>
+                <pre class="code-text"><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <span class="c-key">name</span>: <span class="c-str">"Kiran Kumar"</span>,
+  <span class="c-key">role</span>: <span class="c-str">"Full Stack Dev"</span>,
+  <span class="c-key">skills</span>: [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>,
+           <span class="c-str">"JS"</span>, <span class="c-str">"Python"</span>],
+  <span class="c-key">passion</span>: <span class="c-str">"Building the Web"</span>,
+  <span class="c-key">status</span>: <span class="c-str">"Open to Work 🚀"</span>
+};</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-icons">
+          <span class="fi fi-html" title="HTML">&#60;/&#62;</span>
+          <span class="fi fi-css" title="CSS">CSS</span>
+          <span class="fi fi-js" title="JS">JS</span>
+          <span class="fi fi-py" title="Python">PY</span>
+          <span class="fi fi-bs" title="Bootstrap">BS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll Down</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Who Am I</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h3>Passionate Developer &amp; Learner</h3>
+        <p>I am a passionate Computer Engineering student currently pursuing Diploma in CME at Aditya Polytechnic College. I have practical experience in frontend development and full stack technologies through industrial training at Anurag IT Solutions. I enjoy building modern, responsive, and user-friendly web applications while continuously improving my technical skills.</p>
+        <div class="about-stats">
+          <div class="stat-item"><span class="stat-num" data-count="83">0</span><span>%</span><p>Academic Score</p></div>
+          <div class="stat-item"><span class="stat-num" data-count="6">0</span><span>+</span><p>Months Training</p></div>
+          <div class="stat-item"><span class="stat-num" data-count="3">0</span><span>+</span><p>Projects Built</p></div>
+        </div>
+      </div>
+      <div class="about-highlights reveal">
+        <div class="highlight-card"><div class="hc-icon"><i class="fas fa-graduation-cap"></i></div><div><h4>Diploma in CME</h4><p>Aditya Polytechnic College</p></div></div>
+        <div class="highlight-card"><div class="hc-icon"><i class="fas fa-star"></i></div><div><h4>83% Academic Performance</h4><p>SBTET Board</p></div></div>
+        <div class="highlight-card"><div class="hc-icon"><i class="fas fa-code"></i></div><div><h4>Full Stack Dev Training</h4><p>Anurag IT Solutions</p></div></div>
+        <div class="highlight-card"><div class="hc-icon"><i class="fas fa-database"></i></div><div><h4>Data Science Exposure</h4><p>Industrial Training</p></div></div>
+        <div class="highlight-card"><div class="hc-icon"><i class="fas fa-laptop-code"></i></div><div><h4>Real-time Project Experience</h4><p>Live Project Development</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <h3><i class="fas fa-paint-brush"></i> Frontend Skills</h3>
+        <div class="skill-bars">
+          <div class="skill-bar"><div class="skill-info"><span>HTML</span><span>90%</span></div><div class="bar"><div class="bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar"><div class="skill-info"><span>CSS</span><span>85%</span></div><div class="bar"><div class="bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar"><div class="skill-info"><span>Bootstrap</span><span>80%</span></div><div class="bar"><div class="bar-fill" data-width="80"></div></div></div>
+          <div class="skill-bar"><div class="skill-info"><span>JavaScript</span><span>75%</span></div><div class="bar"><div class="bar-fill" data-width="75"></div></div></div>
+          <div class="skill-bar"><div class="skill-info"><span>jQuery</span><span>70%</span></div><div class="bar"><div class="bar-fill" data-width="70"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3><i class="fas fa-terminal"></i> Programming</h3>
+        <div class="skill-bars">
+          <div class="skill-bar"><div class="skill-info"><span>Python (Basics)</span><span>65%</span></div><div class="bar"><div class="bar-fill" data-width="65"></div></div></div>
+        </div>
+        <h3 style="margin-top:2rem;"><i class="fas fa-tools"></i> Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fas fa-file-word"></i> MS Word</span>
+          <span class="skill-tag"><i class="fas fa-file-excel"></i> Excel</span>
+          <span class="skill-tag"><i class="fas fa-file-powerpoint"></i> PowerPoint</span>
+          <span class="skill-tag"><i class="fas fa-briefcase"></i> MS Office</span>
+        </div>
+        <h3 style="margin-top:2rem;"><i class="fas fa-heart"></i> Soft Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">💡 Problem Solving</span>
+          <span class="skill-tag">🤝 Teamwork</span>
+          <span class="skill-tag">⏱ Time Management</span>
+          <span class="skill-tag">📚 Eager to Learn</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-img">
+          <div class="project-img-bg p1"></div>
+          <span class="project-type-badge">Mini Project</span>
+        </div>
+        <div class="project-body">
+          <h3>Student Database Management System</h3>
+          <p>Developed a Student Database Management System to store, manage, and retrieve student records efficiently. Implemented CRUD operations and designed a responsive frontend.</p>
+          <ul class="project-features">
+            <li><i class="fas fa-check-circle"></i> CRUD Operations</li>
+            <li><i class="fas fa-check-circle"></i> Responsive UI</li>
+            <li><i class="fas fa-check-circle"></i> Student Record Management</li>
+            <li><i class="fas fa-check-circle"></i> Efficient Data Handling</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-img">
+          <div class="project-img-bg p2"></div>
+          <span class="project-type-badge working">Currently Working</span>
+        </div>
+        <div class="project-body">
+          <h3>Hari Naturals Website</h3>
+          <p>Developing a modern business website for Hari Naturals with responsive design, attractive UI, product showcase sections, and professional frontend implementation.</p>
+          <ul class="project-features">
+            <li><i class="fas fa-check-circle"></i> Responsive Business Website</li>
+            <li><i class="fas fa-check-circle"></i> Product Showcase</li>
+            <li><i class="fas fa-check-circle"></i> Modern UI Design</li>
+            <li><i class="fas fa-check-circle"></i> Mobile Friendly</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span>
+          </div>
+          <div class="project-links">
+            <a href="https://harinaturals.com/products.html" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-img">
+          <div class="project-img-bg p3"></div>
+          <span class="project-type-badge working">Currently Working</span>
+        </div>
+        <div class="project-body">
+          <h3>Anurag IT Solutions Website</h3>
+          <p>Currently building a professional company portfolio website for Anurag IT Solutions with modern animations, responsive layouts, and interactive user experience.</p>
+          <ul class="project-features">
+            <li><i class="fas fa-check-circle"></i> Company Portfolio Design</li>
+            <li><i class="fas fa-check-circle"></i> Interactive UI</li>
+            <li><i class="fas fa-check-circle"></i> Responsive Layout</li>
+            <li><i class="fas fa-check-circle"></i> Professional Design System</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span>
+          </div>
+          <div class="project-links">
+            <a href="https://www.anuragitsolutions.com/" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section experience-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title">Industrial <span class="gradient-text">Training</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="experience-card reveal">
+      <div class="exp-header">
+        <div class="exp-icon"><i class="fas fa-building"></i></div>
+        <div>
+          <h3>Anurag IT Solutions</h3>
+          <span class="exp-duration"><i class="fas fa-calendar"></i> 6 Months | Data Science &amp; Full Stack Development</span>
+        </div>
+        <span class="exp-badge">Completed</span>
+      </div>
+      <p class="exp-desc">Completed industrial training in Data Science with Full Stack Development at Anurag IT Solutions for 6 months. Gained hands-on experience with real-world projects and modern development practices.</p>
+      <div class="exp-skills">
+        <div class="exp-skill"><div class="es-icon"><i class="fas fa-code"></i></div><h4>Frontend Technologies</h4><p>HTML, CSS, Bootstrap, JavaScript development</p></div>
+        <div class="exp-skill"><div class="es-icon"><i class="fab fa-python"></i></div><h4>Python Fundamentals</h4><p>Core Python programming and scripting basics</p></div>
+        <div class="exp-skill"><div class="es-icon"><i class="fas fa-layer-group"></i></div><h4>Full Stack Concepts</h4><p>End-to-end web development lifecycle</p></div>
+        <div class="exp-skill"><div class="es-icon"><i class="fas fa-project-diagram"></i></div><h4>Real-time Projects</h4><p>Practical development on live projects</p></div>
+        <div class="exp-skill"><div class="es-icon"><i class="fas fa-chart-bar"></i></div><h4>Data Science Exposure</h4><p>Introduction to data science workflows</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="section education-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Academic Background</span>
+      <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-content">
+          <span class="tl-year">2023 – 2026</span>
+          <h3>Diploma in Computer Engineering (CME)</h3>
+          <h4>Aditya Polytechnic College</h4>
+          <div class="tl-details">
+            <span><i class="fas fa-certificate"></i> Board: SBTET</span>
+            <span class="tl-percent"><i class="fas fa-star"></i> 83%</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><i class="fas fa-school"></i></div>
+        <div class="timeline-content">
+          <span class="tl-year">2023</span>
+          <h3>SSC (10th Class)</h3>
+          <h4>Government High School, Jaggampeta</h4>
+          <div class="tl-details">
+            <span><i class="fas fa-certificate"></i> Board: SSC</span>
+            <span class="tl-percent"><i class="fas fa-star"></i> 67%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements" class="section achievements-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">My Wins</span>
+      <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="achievements-grid">
+      <div class="achievement-card reveal">
+        <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+        <div class="ach-badge">🥇 First Prize</div>
+        <h3>PPT Presentation</h3>
+        <p>Secured First Prize in PPT Presentation conducted at Aditya Polytechnic College for effectively presenting technical concepts with clarity, confidence, and strong communication skills.</p>
+        <div class="ach-footer"><i class="fas fa-map-marker-alt"></i> Aditya Polytechnic College</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Let's Work Together!</h3>
+        <p>I'm open to internships, freelance projects, and full-time opportunities. Feel free to reach out!</p>
+        <div class="contact-items">
+          <div class="contact-item"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:kirankumarkorimi@gmail.com">kirankumarkorimi@gmail.com</a></div></div>
+          <div class="contact-item"><div class="ci-icon"><i class="fas fa-phone"></i></div><div><h4>Phone</h4><a href="tel:7396747541">+91 7396747541</a></div></div>
+          <div class="contact-item"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Location</h4><p>Raggampeta, Andhra Pradesh</p></div></div>
+          <div class="contact-item"><div class="ci-icon"><i class="fab fa-linkedin-in"></i></div><div><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/kiran-kumar-korimi-55750a3a2/" target="_blank">View Profile</a></div></div>
+        </div>
+      </div>
+      <form class="contact-form glass reveal" id="contact-form">
+        <h3>Send a Message</h3>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required/>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required/>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Send Message</button>
+        <div id="form-success" class="form-success hidden">✅ Message sent! I'll get back to you soon.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">&lt;KK /&gt;</a>
+      <p>Full Stack Developer &amp; Computer Engineering Student</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/kiran-kumar-korimi-55750a3a2/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:kirankumarkorimi@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Kiran Kumar Korimi. Designed &amp; Developed by <span class="gradient-text">Kiran Kumar Korimi</span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
